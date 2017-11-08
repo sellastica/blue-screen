@@ -1,0 +1,2 @@
+Blue screen template
+=========================

@@ -1,0 +1,24 @@
+{
+    "name": "sellastica/blue-screen",
+	"type": "project",
+    "description": "Blue screen",
+	"homepage": "https://github.com/sellastica/blue-screen",
+    "keywords": ["blue screen"],
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Tomáš Krejčí",
+            "email": "tomas@differencemakers.cz"
+        }
+    ],
+    "require": {
+		"php": ">=7.1"
+    },
+	"require-dev": {
+    },
+	"autoload": {
+        "psr-4": {
+            "Sellastica\\BlueScreen\\": "src/"
+        }
+    }
+}
