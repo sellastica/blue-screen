@@ -1,20 +1,21 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="robots" content="noindex">
-    <meta name="generator" content="Tracy">
-    <title><?php echo $message ?? '500 Internal server error'; ?></title>
-
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>404 HTML Template by Colorlib</title>
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #1171ac;
-            font-family: Arial, sans-serif;
+        * {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
         }
 
-        span {
-            font-size: 300px;
+        body {
+            padding: 0;
+            margin: 0;
         }
 
         #content {
@@ -34,30 +35,55 @@
         }
 
         h1 {
-            font-size: 50px;
-            font-weight: bold;
-            line-height: 1.1;
-            display: block;
-            margin: 40px
+            font-family: 'Fredoka One', cursive;
+            font-size: 100px;
+            margin: 0 0 0.2em 0;
+            color: #ff508e;
+            text-transform: uppercase;
         }
 
-        #content p {
-            font-size: 20px;
-            line-height: 1.4;
-            margin: 40px;
+        h2 {
+            font-family: 'Raleway', sans-serif;
+            font-size: 22px;
+            font-weight: 400;
+            text-transform: uppercase;
+            line-height: 160%;
+            color: #222;
+            margin: 0 0 1em 0;
         }
 
-        #content small {
-            color: gray
+        a {
+            font-family: 'Raleway', sans-serif;
+            display: inline-block;
+            font-weight: 700;
+            border-radius: 15px;
+            text-decoration: none;
+            color: #39b1cb;
+        }
+
+        @media only screen and (max-width: 767px) {
+            .notfound-404 h1 {
+                font-size: 60px;
+            }
         }
     </style>
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
 <body>
-<div id="content">
-    <div id="content-in">
-        <span><?php echo $icon ?? ':('; ?></span>
-        <h1><?php echo $message ?? $GLOBALS['message'] ?? '500 Internal server error'; ?></h1>
-		<?php echo !empty($description) ? "<p>$description</p>" : ''; ?>
+<div id="notfound">
+    <div id="content">
+        <div id="content-in">
+            <h1><?php echo $message ?? $GLOBALS['message'] ?? 'Pracujeme'; ?></h1>
+            <h2>
+				<?php echo !empty($description) ? "<p>$description</p>" : 'Zrovna provádíme údržbu!<br>Zkuste to prosím za chvilku znovu.'; ?>
+            </h2>
+            <a href="">Obnovit stránku</a>
+        </div>
     </div>
 </div>
 </body>
+</html>
